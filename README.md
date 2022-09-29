@@ -19,7 +19,7 @@ To install the AN environment for Python scripts and DeepLabCut of CPU version, 
 
 ## Steps of the pipeline
 
-The overview of the pipeline:
+The overview of the steps:
 <p align="left">
   <img align="center" width="780" src="/images/Diagram.png">
 </p>
