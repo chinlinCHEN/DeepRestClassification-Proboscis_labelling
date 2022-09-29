@@ -7,8 +7,8 @@ This repository is part of the analysis pipeline of https://github.com/NeLy-EPFL
 ## Content
 - [Installation](#installation)
 - [Steps of the classification pipeline](#reproducing-the-figures)
-  - [Overview]
-  - [Video: Raw DLC predictions vs. Denoised predictions]
+  - [Overview](#overview)
+  - [Raw DLC predictions vs. Denoised predictions]((#Raw-DLC-predictions-vs.-Denoised-predictions))
 
 
 
@@ -19,7 +19,7 @@ To install the AN environment for Python scripts and DeepLabCut of CPU version, 
 
 ## Steps of the pipeline
 
-The overview of the steps:
+### Overview
 <p align="left">
   <img align="center" width="780" src="/images/Diagram.png">
 </p>
