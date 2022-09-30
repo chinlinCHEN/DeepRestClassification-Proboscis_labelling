@@ -28,12 +28,11 @@ To install the AN environment for Python scripts and DeepLabCut of CPU version, 
 
 ### Raw DLC predictions vs. Denoised DLC predictions
 The raw prediction is not perfect and still has noisy trace due to jumping predictions.
-This filter examination show that the stability of prediction can be improved by the posthoc denoising.
-Median filter were chosen for the following event detection because it still not only remove most of the noise but also preserve the waveform pattern. 
+This filter examination show that the stability of prediction can be improved by the posthoc denoising on the trace. Denosied predictions were projected back to the video.
 
-<p align="left">
-  <img align="center" width="780" src="/images/Raw_vs_Filtered.gif">
-</p>
+The median filter was chosen for the following event detection because it not only removes most of the noise but also preserves the waveform pattern. The Savitsky-Golay filter were not used because it causes skewed waveform which leads to significant time shift of event onset in the following steps of event detection. 
+
+![Alt text](./images/Raw_vs_Filtered.gif?raw=true "Raw_vs_Filtered")
 
 
 
