@@ -1,0 +1,65 @@
+# Project definitions (do not edit)
+Task: PER
+scorer: CLC
+date: Mar18
+
+# Project path (change when moving around)
+project_path: /mnt/data/CLC/dlc/PER-CLC-2020-03-18
+
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /mnt/data/CLC/dlc/PER-CLC-2020-03-18/videos/output.mp4:
+    crop: 0, 960, 0, 480
+  ? /mnt/data/CLC/Ascending_Project/SS31232/2P/20200207/SS31232-tdTomGC6fopt-fly2/SS31232-tdTomGC6fopt-fly2-001/output/dlc/PER/camera_6/200207_SS31232-tdTomGC6fopt-Fly2-behData_001_camera_6.mp4
+  : crop: 0, 960, 0, 480
+  ? /mnt/data/CLC/Ascending_Project/SS31232/2P/20200217/SS31232-tdTomGC6fopt-fly1/SS31232-tdTomGC6fopt-fly1-002/output/dlc/PER/camera_6/200217_SS31232-tdTomGC6fopt-Fly1-behData_002_camera_6.mp4
+  : crop: 0, 960, 0, 480
+  ? /mnt/data/CLC/Ascending_Project/SS31232/2P/20200217/SS31232-tdTomGC6fopt-fly1/SS31232-tdTomGC6fopt-fly1-006/output/dlc/PER/camera_6/200217_SS31232-tdTomGC6fopt-Fly1-behData_006_camera_6.mp4
+  : crop: 0, 960, 0, 480
+  ? /mnt/data/CLC/Ascending_Project/SS31232/2P/20200305/SS31232-tdTomGC6fopt-fly1/SS31232-tdTomGC6fopt-fly2-001/output/dlc/PER/camera_6/200305_SS31232-tdTomGC6fopt-Fly2-behData_001_camera_6.mp4
+  : crop: 0, 960, 0, 480
+  ? /mnt/data/CLC/Ascending_Project/SS31232/2P/20200305/SS31232-tdTomGC6fopt-fly3/SS31232-tdTomGC6fopt-fly3-003/output/dlc/PER/camera_6/200305_SS31232-tdTomGC6fopt-Fly3-behData_003_camera_6.mp4
+  : crop: 0, 960, 0, 480
+bodyparts:
+- Pbsc0
+- Pbsc1
+
+start: 0
+stop: 1
+numframes2pick: 20
+
+# Plotting configuration
+skeleton:
+- - Pbsc0
+  - Pbsc1
+
+skeleton_color: red
+pcutoff: 0.1
+dotsize: 9
+alphavalue: 0.7
+colormap: rainbow
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 3
+resnet: 50
+snapshotindex: -2
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default

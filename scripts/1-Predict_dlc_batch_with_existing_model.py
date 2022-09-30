@@ -17,7 +17,7 @@ if not os.path.exists(output_dir):
 	os.makedirs(output_dir)
 
 
-input_video = '../samples/sample.mp4'
+input_video = '../samples/video.mp4'
 
 
 ## For refining and re-training the network:
