@@ -137,6 +137,59 @@ def save_PER_dic(filename='PER_camera_6.p'):
 
 
 
+def openDicData(PER_output_dir):
+
+	if os.path.exists(PER_output_dir+"/PER_labels_camera_6.p"):
+		dicData = pickle.load( open( PER_output_dir+"/PER_labels_camera_6.p", "rb" ) )
+		# Proboscis original coordinate
+		pbsc0_X=dicData['pbsc0_X']
+		pbsc0_Y=dicData['pbsc0_Y']
+		
+		pbsc1_X=dicData['pbsc1_X']
+		pbsc1_Y=dicData['pbsc1_Y']
+
+		# Proboscis fix coordinate of Pbsc0
+		fix_pbsc0_X=dicData['fix_pbsc0_X']
+		fix_pbsc0_Y=dicData['fix_pbsc0_Y']
+
+		# Proboscis filtered coordinate of Pbsc0
+		smth_pbsc1_X=dicData['smth_pbsc1_X']
+		smth_pbsc1_Y=dicData['smth_pbsc1_Y']
+
+		med_pbsc1_X=dicData['med_pbsc1_X']
+		med_pbsc1_Y=dicData['med_pbsc1_Y']
+
+		savgl_pbsc1_X=dicData['savgl_pbsc1_X']
+		savgl_pbsc1_Y=dicData['savgl_pbsc1_Y']	
+
+		sarimax_pbsc1_X=dicData['sarimax_pbsc1_X']
+		sarimax_pbsc1_Y=dicData['sarimax_pbsc1_Y']	
+
+		# PER extension length
+		PER_exten_len=dicData['PER_exten_len']
+		smth_PER_exten_len=dicData['smth_PER_exten_len']		
+		med_PER_exten_len=dicData['med_PER_exten_len']
+		savgl_PER_exten_len=dicData['savgl_PER_exten_len']
+		sarimax_PER_exten_len=dicData['sarimax_PER_exten_len']	
+
+		# norm PER extension length
+		norm_PER_exten_len=dicData['norm_range_PER_exten_len']
+		norm_smth_PER_exten_len=dicData['norm_range_smth_PER_exten_len']		
+		norm_med_PER_exten_len=dicData['norm_range_med_PER_exten_len']
+		norm_savgl_PER_exten_len=dicData['norm_range_savgl_PER_exten_len']
+		norm_sarimax_PER_exten_len=dicData['norm_range_sarimax_PER_exten_len']			
+
+	else:
+		print ("File not found - PER_camera_6.p not analysed yet")
+		sys.exit(0) 
+
+
+	return pbsc0_X, pbsc0_Y, pbsc1_X, pbsc1_Y,\
+			fix_pbsc0_X, fix_pbsc0_Y,\
+			smth_pbsc1_X, smth_pbsc1_Y, med_pbsc1_X, med_pbsc1_Y, savgl_pbsc1_X, savgl_pbsc1_Y, sarimax_pbsc1_X, sarimax_pbsc1_Y,\
+			PER_exten_len, smth_PER_exten_len, med_PER_exten_len, savgl_PER_exten_len, sarimax_PER_exten_len, \
+			norm_PER_exten_len, norm_smth_PER_exten_len, norm_med_PER_exten_len, norm_savgl_PER_exten_len, norm_sarimax_PER_exten_len
+
 
 
 
