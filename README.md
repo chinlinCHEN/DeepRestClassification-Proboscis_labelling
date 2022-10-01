@@ -56,19 +56,24 @@ source activate AN
 python 2-quantify_extensionLength_filter_binEvent.py
 ```
 
-4. [Optional] Check the effect of filter on the raw traces by visualizing them in the video:
-```bash
-python 3-Make_filtered_coordinates_movie.py
-```
+
 
 
 
 
 ### Raw DLC predictions vs. Denoised DLC predictions
+
+
 The raw prediction is not perfect and still has noisy trace due to jumping predictions.
 This filter examination shows that the stability of prediction can be improved by the posthoc denoising on the trace. Denosied predictions are projected back to the video.
 
 The median filter (top-right) was chosen for the following event detection because it not only removes most of the noise but also preserves the waveform pattern. The Savitsky-Golay filter (bottom left) was not used because it causes skewed waveform which leads to significant time shift of event onset in the following steps of event detection. 
+
+
+[Optional] Check the effect of filter on the raw traces by visualizing them in the video:
+```bash
+python 3-Make_filtered_coordinates_movie.py
+```
 
 ![Alt text](./images/Raw_vs_Filtered.gif?raw=true "Raw_vs_Filtered")
 
