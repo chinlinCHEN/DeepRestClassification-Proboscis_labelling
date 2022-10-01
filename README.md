@@ -6,8 +6,9 @@ This repository is part of the analysis pipeline of https://github.com/NeLy-EPFL
 
 ## Content
 - [Installation](#installation)
-- [Steps of the classification pipeline](#reproducing-the-figures)
-  - [Overview](#overview)
+- [Steps of the classification pipeline]((#Steps-of-the-classification-pipeline))
+  - [Overview]((#overview))
+  - [Steps]((#Steps))
   - [Raw predictions vs. Denoised predictions]((#Raw-DLC-predictions-vs.-Denoised-predictions))
 
 
@@ -21,12 +22,45 @@ To install the AN environment for Python scripts and DeepLabCut of CPU version, 
 
 ### Overview
 1. A DLC model is trained to label the landmark of both ends of proboscis.
-2. A script is created to predict predict the landmarks through the video in the dataset.
-3. The length between two ends is calculated and preprocessed.
+2. The script is created to predict the proboscis landmark through the video.
+3. The length between two ends of proboscis is calculated and preprocessed.
 4. The extension event is classified through a series of derivation, onset and end timing determnation, condition fitering to remove false positive detection, and finally binarize the period to indicate the epochs of the targeted behavior.
 <p align="left">
   <img align="center" width="780" src="/images/Diagram.png">
 </p>
+
+
+### Steps
+
+1. [Optional] Generate the video from videoframes:
+If there are only image frames, convert them into a video which is the input for DeepLabCut.
+
+  Prerequisite: ffmpeg (https://ffmpeg.org/download.html)
+```bash
+python 0-make_video_for_single_camera.py
+```
+
+
+2. Predict landmarks in the video using DeepLabCur trained model:
+```bash
+source activate DLC-CPU
+python 0-make_video_for_single_camera.py
+```
+```bash
+conda deactivate
+```
+
+3. Denoise the trace of the length, detect the extension period, binarize into behavioral epcohs:
+```bash
+source activate AN
+python 2-quantify_extensionLength_filter_binEvent.py
+```
+
+4. [Optional] Check the effect of filter on the raw traces by visualizing them in the video:
+```bash
+python 3-Make_filtered_coordinates_movie.py
+```
+
 
 
 
