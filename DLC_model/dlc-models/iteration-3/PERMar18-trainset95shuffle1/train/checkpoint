@@ -1,0 +1,6 @@
+model_checkpoint_path: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-11000"
+all_model_checkpoint_paths: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-7000"
+all_model_checkpoint_paths: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-8000"
+all_model_checkpoint_paths: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-9000"
+all_model_checkpoint_paths: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-10000"
+all_model_checkpoint_paths: "/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot-11000"

@@ -11,6 +11,7 @@ import math
 import scipy.signal
 import statsmodels.api as sm
 import pickle
+from skimage import io
 from scipy.fftpack import rfft, irfft, fftfreq
 
 
@@ -414,11 +415,11 @@ def find_nearest(ori_array, ori_value, condition=None, height_cond=None):
 							idx=max_idx+idx_temp 
 							# print('idx_temp',idx_temp)
 
-							plt.title('similarity ='+str(similarity)+' frame# ='+str(idx))
-							plt.plot(Similarity_with_value_thres)
-							plt.plot(idx_temp, Similarity_with_value_thres[idx_temp], 'ro')
-							plt.savefig(outputPERdir+'local_evt_no_local_max.png')
-							plt.clf()
+							# plt.title('similarity ='+str(similarity)+' frame# ='+str(idx))
+							# plt.plot(Similarity_with_value_thres)
+							# plt.plot(idx_temp, Similarity_with_value_thres[idx_temp], 'ro')
+							# plt.savefig(outputPERdir+'local_evt_no_local_max.png')
+							# plt.clf()
 
 
 					else:
@@ -428,16 +429,16 @@ def find_nearest(ori_array, ori_value, condition=None, height_cond=None):
 					idx=max_idx+local_max_idx[0]
 
 
-					plt.title('similarity ='+str(similarity)+' frame# ='+str(idx))
-					plt.plot(0-max_idx,value,'x')
-					plt.plot(array[max_idx:-1],'r') 
-					plt.plot(np.abs(array[max_idx:-1] - value),'g')
-					plt.plot(Similarity_with_value,'b')
-					plt.plot(local_max_idx, Similarity_with_value[local_max_idx], "x")
-					plt.plot(idx-max_idx, array[idx], "v")
+					# plt.title('similarity ='+str(similarity)+' frame# ='+str(idx))
+					# plt.plot(0-max_idx,value,'x')
+					# plt.plot(array[max_idx:-1],'r') 
+					# plt.plot(np.abs(array[max_idx:-1] - value),'g')
+					# plt.plot(Similarity_with_value,'b')
+					# plt.plot(local_max_idx, Similarity_with_value[local_max_idx], "x")
+					# plt.plot(idx-max_idx, array[idx], "v")
 
-					plt.savefig(outputPERdir+'local_evt.png')
-					plt.clf()
+					# plt.savefig(outputPERdir+'local_evt.png')
+					# plt.clf()
 
 					break			
 
@@ -584,7 +585,7 @@ def diff_trace(trace, samplerate=1, diff_window_s=0.2 ):
 
 
 
-def detect_PER_event(trace):
+def detect_PER_event(trace, outputPERdir, event_max_dur=2, event_min_dur=0.27):
 
 	print('Detecting events...')
 

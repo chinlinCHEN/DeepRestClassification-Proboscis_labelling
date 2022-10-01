@@ -4,20 +4,20 @@ Use pythonw to run the script!!!
 
 import sys
 import os
-# import deeplabcut
+import deeplabcut
 
 
 # path_model_config_file='/mnt/data/CLC/dlc/PER-CLC-2020-03-18/config.yaml'
-path_model_config_file='../DLC_model/PER-CLC-2020-03-18/config.yaml'
+path_model_config_file='../DLC_model/config.yaml'
 
 
 
-output_dir = '../samples/outputs/'
+output_dir = '../outputs/'
 if not os.path.exists(output_dir):
 	os.makedirs(output_dir)
 
 
-input_video = '../samples/video.mp4'
+input_video = '../outputs/video.mp4'
 
 
 ## For refining and re-training the network:

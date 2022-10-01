@@ -1,0 +1,128 @@
+2020-03-25 01:19:09 Config:
+{'all_joints': [[0], [1]],
+ 'all_joints_names': ['Pbsc0', 'Pbsc1'],
+ 'batch_size': 1,
+ 'bottomheight': 400,
+ 'crop': True,
+ 'crop_pad': 0,
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-3/UnaugmentedDataSet_PERMar18/PER_CLC95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/Users/clc/anaconda3/envs/DLC-CPU/lib/python3.7/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'leftwidth': 400,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'max_input_size': 1500,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-3/UnaugmentedDataSet_PERMar18/Documentation_data-PER_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'minsize': 100,
+ 'mirror': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'resnet_50',
+ 'num_joints': 2,
+ 'optimizer': 'sgd',
+ 'pos_dist_thresh': 17,
+ 'project_path': '/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18',
+ 'regularize': False,
+ 'rightwidth': 400,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'topheight': 400,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2020-03-25 01:32:04 iteration: 500 loss: 0.0250 lr: 0.005
+2020-03-25 01:44:34 iteration: 1000 loss: 0.0135 lr: 0.005
+2020-03-25 01:57:01 iteration: 1500 loss: 0.0108 lr: 0.005
+2020-03-25 02:10:07 iteration: 2000 loss: 0.0098 lr: 0.005
+2020-03-25 02:23:00 iteration: 2500 loss: 0.0087 lr: 0.005
+2020-03-25 02:36:03 iteration: 3000 loss: 0.0081 lr: 0.005
+2020-03-25 02:48:42 iteration: 3500 loss: 0.0074 lr: 0.005
+2020-03-25 03:01:33 iteration: 4000 loss: 0.0074 lr: 0.005
+2020-03-25 03:15:19 iteration: 4500 loss: 0.0071 lr: 0.005
+2020-03-25 03:28:13 iteration: 5000 loss: 0.0068 lr: 0.005
+2020-03-25 03:41:17 iteration: 5500 loss: 0.0062 lr: 0.005
+2020-03-25 03:55:06 iteration: 6000 loss: 0.0061 lr: 0.005
+2020-03-25 04:08:38 iteration: 6500 loss: 0.0055 lr: 0.005
+2020-03-25 04:22:25 iteration: 7000 loss: 0.0057 lr: 0.005
+2020-03-25 04:35:36 iteration: 7500 loss: 0.0058 lr: 0.005
+2020-03-25 04:49:16 iteration: 8000 loss: 0.0053 lr: 0.005
+2020-03-25 05:04:15 iteration: 8500 loss: 0.0054 lr: 0.005
+2020-03-25 05:17:59 iteration: 9000 loss: 0.0051 lr: 0.005
+2020-03-25 05:31:56 iteration: 9500 loss: 0.0049 lr: 0.005
+2020-03-25 05:45:46 iteration: 10000 loss: 0.0048 lr: 0.005
+2020-03-25 06:00:15 iteration: 10500 loss: 0.0084 lr: 0.02
+2020-03-25 06:15:14 iteration: 11000 loss: 0.0077 lr: 0.02
+2020-03-25 06:15:17 Config:
+{'all_joints': [[0], [1]],
+ 'all_joints_names': ['Pbsc0', 'Pbsc1'],
+ 'batch_size': 1,
+ 'bottomheight': 400,
+ 'crop': True,
+ 'crop_pad': 0,
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-3/UnaugmentedDataSet_PERMar18/PER_CLC95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'deconvolutionstride': 2,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/Users/clc/anaconda3/envs/DLC-CPU/lib/python3.7/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'leftwidth': 400,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'max_input_size': 1500,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-3/UnaugmentedDataSet_PERMar18/Documentation_data-PER_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'minsize': 100,
+ 'mirror': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'resnet_50',
+ 'num_joints': 2,
+ 'optimizer': 'sgd',
+ 'output_stride': 16,
+ 'pos_dist_thresh': 17,
+ 'project_path': '/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18',
+ 'regularize': False,
+ 'rightwidth': 400,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/Users/clc/Documents/EPFL/NeLy/Data/ANproj/dlc/PER-CLC-2020-03-18/dlc-models/iteration-3/PERMar18-trainset95shuffle1/test/snapshot',
+ 'stride': 8.0,
+ 'topheight': 400,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}

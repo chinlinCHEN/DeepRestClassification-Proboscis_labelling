@@ -4,6 +4,7 @@ import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 
 
 
@@ -16,7 +17,7 @@ import utils.signal_utils as signal_utils
 
 
 dlc_output_path_list = [
-'../samples/',
+'../outputs/',
 
 ]
 
@@ -106,11 +107,11 @@ for dlc_outputFile_dir in dlc_output_path_list:
 	if not os.path.exists(dlc_outputFile_dir):
 		print("/nThe output path doesn't exist.../n")
 		sys.exit(0)
-	else:
+
 
 
 	PER_h5_Dir= dlc_outputFile_dir
-	outputPERdir = PER_h5_Dir+'outputs/'
+	outputPERdir = PER_h5_Dir+'PE_classification_results/'
 
 	if not os.path.exists(outputPERdir):
 		os.makedirs(outputPERdir)
@@ -270,7 +271,7 @@ for dlc_outputFile_dir in dlc_output_path_list:
 	# plot_utils.Plot_traces(series_set=dPER_for_plot, savepath=outputPERdir+'Filtered_dPER_length_norm_0and1.png')
 
 
-	evt_bin_trace, evt_startIdx_list, evt_endIdx_list = signal_utils.detect_PER_event(norm_range_med_PER_exten_len)
+	evt_bin_trace, evt_startIdx_list, evt_endIdx_list = signal_utils.detect_PER_event(norm_range_med_PER_exten_len, outputPERdir, event_max_dur=event_max_dur, event_min_dur=event_min_dur)
 	print('max evt_bin_trace', max(evt_bin_trace))
 	print('min evt_bin_trace', min(evt_bin_trace))
 	print('evt_startIdx_list', evt_startIdx_list)
@@ -289,7 +290,7 @@ for dlc_outputFile_dir in dlc_output_path_list:
 
 
 
-	os_utils.save_PER_dic(filename='PER_labels_camera_6.p')
+	save_PER_dic(filename='PER_labels_camera_6.p')
 
 
 

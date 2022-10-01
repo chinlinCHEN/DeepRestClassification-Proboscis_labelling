@@ -1,0 +1,14 @@
+all_joints:
+- - 0
+- - 1
+all_joints_names:
+- Pbsc0
+- Pbsc1
+dataset: training-datasets/iteration-3/UnaugmentedDataSet_PERMar18/PER_CLC95shuffle1.mat
+global_scale: 0.8
+init_weights: /Users/clc/anaconda3/envs/DLC-CPU/lib/python3.7/site-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: resnet_50
+num_joints: 2
+scoremap_dir: test
