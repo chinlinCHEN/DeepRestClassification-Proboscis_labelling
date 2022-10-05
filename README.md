@@ -63,7 +63,7 @@ python 2-quantify_extensionLength_filter_binEvent.py
   <img align="center" width="780" src="/outputs/PE_classification_results/PER_event.png">
 </p>
 
-Finally, the proboscis extension events are detected (top) and the event period are converted into a binary trace (bottom). The intermediate step of derivatation is shown in the middle to illusrate the peak detection (green dot) and onset time searching (blue arrowhead). The end time of the event is also found in the raw trace as indicated (top; red arrowhead).
+Finally, the proboscis extension length is calculated and the events are detected (top). The event period are converted into a binary trace (bottom). The intermediate step of derivatation is shown in the middle to illusrate the peak detection (green dot) and onset time searching (blue arrowhead). The event end timing of the event is also found in the raw trace as indicated (top; red arrowhead).
 
 
 
