@@ -44,24 +44,25 @@ python 0-make_video_for_single_camera.py
 2. Predict landmarks in the video using DeepLabCur trained model:
 ```bash
 source activate DLC-CPU
-python 0-make_video_for_single_camera.py
+python 1-Predict_dlc_batch_with_existing_model.py
 ```
 ```bash
 conda deactivate
 ```
+
+![Alt text](./images/dlc_pred.gif?raw=true "dlc_pred")
+
+
+
+
+### Raw DLC predictions vs. Denoised DLC predictions
+
 
 3. Denoise the trace of the length, detect the extension period, binarize into behavioral epcohs:
 ```bash
 source activate AN
 python 2-quantify_extensionLength_filter_binEvent.py
 ```
-
-
-
-
-
-
-### Raw DLC predictions vs. Denoised DLC predictions
 
 
 The raw prediction is not perfect and still has noisy trace due to jumping predictions.
