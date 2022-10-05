@@ -53,16 +53,24 @@ conda deactivate
 ![Alt text](./images/dlc_pred.gif?raw=true "dlc_pred")
 
 
-
-
-### Raw DLC predictions vs. Denoised DLC predictions
-
-
 3. Denoise the trace of the length, detect the extension period, binarize into behavioral epcohs:
 ```bash
 source activate AN
 python 2-quantify_extensionLength_filter_binEvent.py
 ```
+
+<p align="left">
+  <img align="center" width="780" src="/outputs/PE_classification_results/PER_event.png">
+</p>
+
+Finally, the proboscis extension events are detected (top) and the event period are converted into a binary trace (bottom). The intermediate step of derivatation is shown in the middle to illusrate the peak detection (green dot) and onset time searching (blue arrowhead). The end time of the event is also found in the raw trace as indicated (top; red arrowhead).
+
+
+
+
+### Raw DLC predictions vs. Denoised DLC predictions
+
+
 
 
 The raw prediction is not perfect and still has noisy trace due to jumping predictions.
